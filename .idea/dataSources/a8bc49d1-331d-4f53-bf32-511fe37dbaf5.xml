@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12029</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="topjava">
+      <ObjectId>57394</ObjectId>
+    </database>
+    <database id="4" parent="1" name="contacts">
+      <ObjectId>409743</ObjectId>
+    </database>
+    <database id="5" parent="1" name="websmoke">
+      <ObjectId>458948</ObjectId>
+    </database>
+    <role id="6" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="user">
+      <ObjectId>57396</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>2017-10-21 21:00:00+00</ValidUntil>
+    </role>
+    <schema id="8" parent="2" name="postgres">
+      <ObjectId>16393</ObjectId>
+      <IntrospectionTimestamp>2018-04-27.00:11:05.189</IntrospectionTimestamp>
+      <IntrospectionStateNumber>9682745</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_temp_1">
+      <ObjectId>11215</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11216</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="information_schema">
+      <ObjectId>11480</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_temp_2">
+      <ObjectId>16410</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="pg_toast_temp_2">
+      <ObjectId>16411</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_temp_3">
+      <ObjectId>98354</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="pg_toast_temp_3">
+      <ObjectId>98355</ObjectId>
+    </schema>
+    <sequence id="18" parent="8" name="contact_id_seq">
+      <ObjectId>32863</ObjectId>
+      <StateNumber>765</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="8" name="contact_tel_detail_id_seq">
+      <ObjectId>32879</ObjectId>
+      <StateNumber>767</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="20" parent="8" name="test_id_seq">
+      <ObjectId>1040567</ObjectId>
+      <StateNumber>14940</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="21" parent="8" name="contact">
+      <ObjectId>32865</ObjectId>
+      <StateNumber>768</StateNumber>
+    </table>
+    <table id="22" parent="8" name="contact_hobby_detail">
+      <ObjectId>32895</ObjectId>
+      <StateNumber>768</StateNumber>
+    </table>
+    <table id="23" parent="8" name="contact_tel_detail">
+      <ObjectId>32881</ObjectId>
+      <StateNumber>767</StateNumber>
+    </table>
+    <table id="24" parent="8" name="contacts">
+      <ObjectId>1040569</ObjectId>
+      <StateNumber>9682745</StateNumber>
+    </table>
+    <table id="25" parent="8" name="hobby">
+      <ObjectId>32874</ObjectId>
+      <StateNumber>768</StateNumber>
+    </table>
+    <column id="26" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>765</StateNumber>
+      <DefaultExpression>nextval(&apos;contact_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>contact_id_seq</SequenceName>
+    </column>
+    <column id="27" parent="21" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="28" parent="21" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="21" name="birth_date">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>765</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="30" parent="21" name="version">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>765</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="31" parent="21" name="contact_pkey">
+      <ObjectId>32870</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="32" parent="21" name="contact_first_name_last_name_key">
+      <ObjectId>32872</ObjectId>
+      <ColNames>first_name
+last_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="21" name="contact_pkey">
+      <ObjectId>32871</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>contact_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="34" parent="21" name="contact_first_name_last_name_key">
+      <ObjectId>32873</ObjectId>
+      <ColNames>first_name
+last_name</ColNames>
+      <UnderlyingIndexName>contact_first_name_last_name_key</UnderlyingIndexName>
+    </key>
+    <column id="35" parent="22" name="contact_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>768</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="36" parent="22" name="hobby_id">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>768</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="37" parent="22" name="contact_hobby_detail_pkey">
+      <ObjectId>32898</ObjectId>
+      <ColNames>contact_id
+hobby_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="22" name="contact_hobby_detail_pkey">
+      <ObjectId>32899</ObjectId>
+      <ColNames>contact_id
+hobby_id</ColNames>
+      <UnderlyingIndexName>contact_hobby_detail_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="22" name="fk_contact_hobby_detail_1">
+      <ObjectId>32900</ObjectId>
+      <ColNames>contact_id</ColNames>
+      <RefTableId>32865</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>contact</RefTableName>
+      <RefKeyName>contact_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="40" parent="22" name="fk_contact_hobby_detail_2">
+      <ObjectId>32905</ObjectId>
+      <ColNames>hobby_id</ColNames>
+      <RefTableId>32874</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>hobby</RefTableName>
+      <RefKeyName>hobby_pkey</RefKeyName>
+      <RefColNames>hobby_id</RefColNames>
+    </foreign-key>
+    <column id="41" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>767</StateNumber>
+      <DefaultExpression>nextval(&apos;contact_tel_detail_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>contact_tel_detail_id_seq</SequenceName>
+    </column>
+    <column id="42" parent="23" name="contact_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>767</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="43" parent="23" name="tel_type">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>767</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="23" name="tel_number">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>767</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="23" name="version">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>767</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="46" parent="23" name="contact_tel_detail_pkey">
+      <ObjectId>32886</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="47" parent="23" name="contact_tel_detail_contact_id_tel_type_key">
+      <ObjectId>32888</ObjectId>
+      <ColNames>contact_id
+tel_type</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="23" name="contact_tel_detail_pkey">
+      <ObjectId>32887</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>contact_tel_detail_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="49" parent="23" name="contact_tel_detail_contact_id_tel_type_key">
+      <ObjectId>32889</ObjectId>
+      <ColNames>contact_id
+tel_type</ColNames>
+      <UnderlyingIndexName>contact_tel_detail_contact_id_tel_type_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="50" parent="23" name="fk_contact_tel_detail_1">
+      <ObjectId>32890</ObjectId>
+      <ColNames>contact_id</ColNames>
+      <RefTableId>32865</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>contact</RefTableName>
+      <RefKeyName>contact_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="51" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14940</StateNumber>
+      <DefaultExpression>nextval(&apos;test_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>test_id_seq</SequenceName>
+    </column>
+    <column id="52" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14940</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="53" parent="24" name="test_id_uindex">
+      <ObjectId>1040578</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="54" parent="24" name="test_pkey">
+      <ObjectId>1040576</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="24" name="test_pkey">
+      <ObjectId>1040577</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>test_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="25" name="hobby_id">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>766</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="57" parent="25" name="hobby_pkey">
+      <ObjectId>32877</ObjectId>
+      <ColNames>hobby_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="25" name="hobby_pkey">
+      <ObjectId>32878</ObjectId>
+      <ColNames>hobby_id</ColNames>
+      <UnderlyingIndexName>hobby_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
